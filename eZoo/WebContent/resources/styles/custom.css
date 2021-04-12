@@ -18,6 +18,26 @@ body {
 	color: #f5f5f5;
 }
 
+/* unvisited link */
+a:link {
+  color: black;
+}
+
+/* visited link */
+a:visited {
+  color: purple;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+
 #marketplace-navbar{
 	top:110px;
 	position: fixed;

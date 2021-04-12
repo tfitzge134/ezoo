@@ -1,32 +1,39 @@
 package com.feeding_schedules.model;
 
 public class FeedingSchedule {
-	private static int schedule_id ;
-	private static String feeding_time="";
-	private String recurrence="";
-	private String food="";
-	private String notes="";
-	
-	public static int getSchedule_id() {
+	private long schedule_id;
+	private String feeding_time = "";
+	private String recurrence = "";
+	private String food = "";
+	private String notes = "";
+	private long animalid;
+
+	public FeedingSchedule() {
+
+	}
+
+	public long getAnimalid() {
+		return animalid;
+	}
+
+	public void setAnimalid(long animalid) {
+		this.animalid = animalid;
+	}
+
+	public long getSchedule_id() {
 		return schedule_id;
 	}
 
-	public void setSchedule_id(int schedule_id) {
-		FeedingSchedule.schedule_id = schedule_id;
+	public void setSchedule_id(long schedule_id) {
+		this.schedule_id = schedule_id;
 	}
 
-	public static String getFeeding_time() {
+	public String getFeeding_time() {
 		return feeding_time;
 	}
 
 	public void setFeeding_time(String feeding_time) {
-		FeedingSchedule.feeding_time = feeding_time;
-	}
-
-	@Override
-	public String toString() {
-		return "Feeding_schedules [schedule_id=" + schedule_id + ", feeding_time=" + feeding_time + ", recurrence="
-				+ recurrence + ", food=" + food + ", notes=" + notes + "]";
+		this.feeding_time = feeding_time;
 	}
 
 	public String getRecurrence() {
@@ -53,17 +60,18 @@ public class FeedingSchedule {
 		this.notes = notes;
 	}
 
-	public FeedingSchedule() {
-		
+	public void setAnimalID(long animalid) {
+		this.animalid = animalid;
 	}
 
-	public FeedingSchedule(int schedule_id, String feeding_time, String recurrence, String food, String notes) {
-		super();
-		FeedingSchedule.schedule_id = schedule_id;
-		FeedingSchedule.feeding_time = feeding_time;
-		this.recurrence = recurrence;
-		this.food = food;
-		this.notes = notes;
+	public long getAnimalID() {
+		return this.animalid;
+	}
+
+	@Override
+	public String toString() {
+		return "FeedingSchedule [schedule_id=" + schedule_id + ", feeding_time=" + feeding_time + ", recurrence="
+				+ recurrence + ", food=" + food + ", notes=" + notes + ", animalid=" + animalid + "]";
 	}
 
 }

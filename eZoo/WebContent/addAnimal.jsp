@@ -1,4 +1,4 @@
-	<!-- Header -->
+<!-- Header -->
 	<jsp:include page="header.jsp" />
 	
 	<!-- JSTL includes -->
