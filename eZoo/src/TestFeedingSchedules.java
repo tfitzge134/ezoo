@@ -80,7 +80,7 @@ public class TestFeedingSchedules {
 	  private static void removeFeedingSchedule() {
 		FeedingScheduleDAO dao1 = new FeedingScheduleDAOImpl();
 		try {
-			dao1.removeFeedingSchedule(2);
+			dao1.removeFeedingSchedule(2, 3);
 			System.out.println("---DONE: animal_id");
 		} catch (BusinessException e) {
 			e.printStackTrace();
