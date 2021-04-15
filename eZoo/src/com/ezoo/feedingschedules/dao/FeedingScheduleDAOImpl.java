@@ -155,7 +155,7 @@ public class FeedingScheduleDAOImpl implements FeedingScheduleDAO {
 		} catch (Exception e) {
 			// log.error(e);
 			e.printStackTrace();
-			throw new BusinessException("Internal error");
+			throw new BusinessException(e.getMessage());
 		}
 
 	}
@@ -212,7 +212,7 @@ public class FeedingScheduleDAOImpl implements FeedingScheduleDAO {
 		} catch (Exception e) {
 			// log.error(e);
 			e.printStackTrace();
-			throw new BusinessException("Internal error");
+			throw new BusinessException(e.getMessage());
 		}
 	}
 

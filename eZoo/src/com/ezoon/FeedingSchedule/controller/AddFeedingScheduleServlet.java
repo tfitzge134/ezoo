@@ -55,19 +55,16 @@ public class AddFeedingScheduleServlet extends HttpServlet {
 
 				//Call DAO method
 				FeedingScheduleDAO dao = FeedingDAOUtilities.getFeedingScheduleDAO();
-				try {dao.addFeedingSchedule(feedingSchedule);
+				try {
+					dao.addFeedingSchedule(feedingSchedule);
 					request.getSession().setAttribute("message", "Feeding schedule created");
 					request.getSession().setAttribute("messageClass", "alert-success");
-					response.sendRedirect("FeedingScheduleUpdate"); 
-/*
- * 
- */
-
+					response.sendRedirect("feedingSchedules"); 
 				}catch (Exception e){
 					e.printStackTrace();
 					
 					//change the message
-					request.getSession().setAttribute("message", "There was a problem creating the animal at this time");
+					request.getSession().setAttribute("message", "There was a problem creating the animal at this time. Error: " + e.getMessage());
 					request.getSession().setAttribute("messageClass", "alert-danger");
 					
 					request.getRequestDispatcher("AddFeedingSchedule.jsp").forward(request, response);

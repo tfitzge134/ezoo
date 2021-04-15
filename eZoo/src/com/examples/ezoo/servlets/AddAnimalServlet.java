@@ -52,6 +52,19 @@ public class AddAnimalServlet extends HttpServlet {
 		
 		//Create an Animal object from the parameters
 		Animal animalToSave = new Animal();
+		animalToSave.setAnimalID(id);
+		animalToSave.setName(name);
+		animalToSave.setTaxKingdom(kingdom);
+		animalToSave.setTaxPhylum(phylum);
+		animalToSave.setTaxClass(clazz);
+		animalToSave.setTaxOrder(order);
+		animalToSave.setTaxFamily(family);
+		animalToSave.setTaxGenus(genus);
+		animalToSave.setTaxSpecies(species);
+		animalToSave.setType(type);
+		animalToSave.setHealthStatus(healthStatus);
+		animalToSave.setHeight(height);
+		animalToSave.setWeight(weight);
 		
 		//Call DAO method
 		AnimalDAO dao = DAOUtilities.getAnimalDao();

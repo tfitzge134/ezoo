@@ -30,10 +30,13 @@
 		
 		<form action="updateFeedingSchedule" method="post" class="form-horizontal">
 		
+		<input type="hidden" name="schedule_id" value="${feedingSchedule.schedule_id}">
+		<input type="hidden" name=animalID value="${feedingSchedule.animalID}">
+		
 		  <div class="form-group">
 		    <label for="id" class="col-sm-4 control-label">schedule_id</label>
 		    <div class="col-sm-4">
-		      <input type="number" class="form-control" id="schedule_id" name="schedule_id" placeholder="ID" value="${feedingSchedule.schedule_id}" required="required"/>
+		      ${feedingSchedule.schedule_id}
 		    </div>
 		  </div>
 		  <div class="form-group">
@@ -64,7 +67,7 @@
 		  <div class="form-group">
 		    <label for="animalid" class="col-sm-4 control-label">animalid</label>
 		    <div class="col-sm-4">
-		      <input type="number" class="form-control" id="animalid" name="animalID" placeholder="animalid" value="${feedingSchedule.animalID}" required="required"/>
+		      ${feedingSchedule.animalID}
 		    </div>
 		  </div>
 		  
