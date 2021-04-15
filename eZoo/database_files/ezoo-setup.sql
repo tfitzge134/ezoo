@@ -32,3 +32,20 @@ insert into animals values (
   'Mammal (Terrestrial)',   -- type
   'Healthy'   -- healthStatus
 );
+
+
+
+-- Table: public.feeding_schedules
+
+-- DROP TABLE public.feeding_schedules;
+
+CREATE TABLE public.feeding_schedules
+(
+    schedule_id integer NOT NULL,
+    feeding_time character varying(50) COLLATE pg_catalog."default",
+    recurrence character varying(10) COLLATE pg_catalog."default",
+    food character varying(50) COLLATE pg_catalog."default",
+    notes character varying(50) COLLATE pg_catalog."default",
+    animalid integer NOT NULL,
+    CONSTRAINT feeding_schedules_pkey PRIMARY KEY (schedule_id)
+);
