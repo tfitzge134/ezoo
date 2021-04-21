@@ -39,19 +39,19 @@
 		<c:choose>
 		<c:when test="${not empty allFeedingSchedules }">
 		<div>
-			<table border="1">
-				<tr border="1">
-					<th>Schedule ID</th>
-					<th>Feeding Time</th>
-					<th>Recurrence</th>
-					<th>Food</th>
-					<th>Notes</th>
-					<th>Animal ID</th>
-					<th>Update</th>
-					<th>Delete</th>
+			<table class="table table-striped table-hover table-responsive ezoo-datatable">
+				<tr>
+					<th class="text-center">Schedule ID</th>
+					<th class="text-center">Feeding Time</th>
+					<th class="text-center">Recurrence</th>
+					<th class="text-center">Food</th>
+					<th class="text-center">Notes</th>
+					<th class="text-center">Animal ID</th>
+					<th class="text-center">Update</th>
+					<th class="text-center">Delete</th>
 				</tr>
 				<c:forEach items="${allFeedingSchedules}" var="fs">
-					<tr background="black">
+					<tr>
 						<td>${fs.schedule_id}</td>
 						<td>${fs.feeding_time}</td>
 						<td>${fs.recurrence}</td>
